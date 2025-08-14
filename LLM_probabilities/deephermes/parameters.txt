@@ -1,0 +1,79 @@
+paramters
+PS C:\Users\Martin\Desktop\optipattern> python -m generate-probabilities --evaluation-graph instances-LRS/evaluation/len_100_sigma16_10.txt --prompt outputs/prompts/prompts_20250514_233555.txt --api-key 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 --provider openrouter2 --model nousresearch/deephermes-3-mistral-24b-preview:free 
+alpha_1=0.3
+alpha_2=0.2
+alpha_3=0.3
+alpha_4=0.2
+beta_1=0.7
+beta_2=0.6
+beta_3=0.4
+beta_4=0.3
+probabilities generated: outputs/probabilities/probabilities_20250514_234059.txt
+PS C:\Users\Martin\Desktop\optipattern>  python -m generate-prompt --evaluation-graph instances-LRS/evaluation/len_200_sigma32_10.txt                             
+prompts generated: outputs/prompts/prompts_20250514_234225.txt                                                                                                    
+PS C:\Users\Martin\Desktop\optipattern> python -m generate-probabilities --evaluation-graph instances-LRS/evaluation/len_200_sigma32_10.txt --prompt outputs/prompts/prompts_20250514_234225.txt --api-key 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 --provider openrouter2 --model nousresearch/deephermes-3-mistral-24b-preview:free 
+alpha_1=0.3
+alpha_2=0.2
+alpha_3=0.3
+alpha_4=0.2
+beta_1=0.7
+beta_2=0.6
+beta_3=0.4
+beta_4=0.3
+probabilities generated: outputs/probabilities/probabilities_20250514_234348.txt
+PS C:\Users\Martin\Desktop\optipattern>  python -m generate-prompt --evaluation-graph instances-LRS/evaluation/len_300_sigma8_7.txt                               
+prompts generated: outputs/prompts/prompts_20250514_234432.txt                                                                                                    
+PS C:\Users\Martin\Desktop\optipattern> python -m generate-probabilities --evaluation-graph instances-LRS/evaluation/len_300_sigma8_7.txt --prompt outputs/prompts/prompts_20250514_234432.txt --api-key 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 --provider openrouter2 --model nousresearch/deephermes-3-mistral-24b-preview:free
+alpha_1=0.3
+alpha_2=0.25
+alpha_3=0.25
+alpha_4=0.2
+beta_1=0.5
+beta_2=0.7
+beta_3=0.6
+beta_4=0.4
+probabilities generated: outputs/probabilities/probabilities_20250514_234614.txt
+PS C:\Users\Martin\Desktop\optipattern> python -m generate-probabilities --evaluation-graph instances-LRS/evaluation/len_500_sigma4_17.txt --prompt outputs/prompts/prompts_20250514_234901.txt --api-key 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 --provider openrouter2 --model nousresearch/deephermes-3-mistral-24b-preview:free 
+alpha_1=0.3
+alpha_2=0.2
+alpha_3=0.2
+alpha_4=0.3
+beta_1=0.6
+beta_2=0.8
+beta_3=0.4
+beta_4=0.6
+probabilities generated: outputs/probabilities/probabilities_20250514_235031.txt
+PS C:\Users\Martin\Desktop\optipattern> python -m generate-probabilities --evaluation-graph instances-LRS/evaluation/len_1000_sigma8_16.txt --prompt outputs/prompts/prompts_20250514_235214.txt --api-key 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 --provider openrouter2 --model nousresearch/deephermes-3-mistral-24b-preview:free 
+alpha_1=0.3
+alpha_2=0.3
+alpha_3=0.2
+alpha_4=0.2
+beta_1=0.7
+beta_2=0.8
+beta_3=0.9
+beta_4=0.9
+probabilities generated: outputs/probabilities/probabilities_20250514_235316.txt
+PS C:\Users\Martin\Desktop\optipattern> python -m generate-probabilities --evaluation-graph instances-LRS/evaluation/len_2000_sigma16_16.txt --prompt outputs/prompts/prompts_20250515_002325.txt --api-key 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 --provider openrouter2 --model nousresearch/deephermes-3-llama-3-8b-preview:free 
+alpha_1=0.25
+alpha_2=0.25
+alpha_3=0.25
+alpha_4=0.25
+beta_1=0.5
+beta_2=0.5
+beta_3=0.5
+beta_4=0.5
+probabilities generated: outputs/probabilities/probabilities_20250515_002739.txt
+PS C:\Users\Martin\Desktop\optipattern> python -m generate-probabilities --evaluation-graph instances-LRS/evaluation/len_5000_sigma32_1.txt --prompt outputs/prompts/prompts_20250515_190905.txt --api-key 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 --provider openrouter2 --model nousresearch/deephermes-3-llama-3-8b-preview:free 
+Based on the evaluation graph data, I have analyzed the patterns in the metrics and derived the following values for alpha and beta:
+
+alpha_1=0.25
+alpha_2=0.25
+alpha_3=0.25
+alpha_4=0.25
+beta_1=0.5
+beta_2=0.5
+beta_3=0.5
+beta_4=0.5
+
+These values are chosen to give equal importance to all four metrics (normalized-length, opportunity, frecuencypenalty, overlappenalty) and set the favorable values for each metric to be around 0.5. This allows for a balanced consideration of all factors in the influence calculation.
+probabilities generated: outputs/probabilities/probabilities_20250515_202744.txt

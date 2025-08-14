@@ -1,0 +1,25 @@
+Installation of R + dev-tools + scmamp (Ubuntu 20.04)
+=====================================================
+
+Follow the instructions on the following web site for the installation of the statistics package R:
+
+https://rtask.thinkr.fr/installation-of-r-4-0-on-ubuntu-20-04-lts-and-tips-for-spatial-packages/
+
+On that website, search for "Install new version of R (4.0)" and execute all the corresponding commands in a console.
+Follow also the instructions under "INSTALL OTHER PACKAGES BINARIES WITH UBUNTU". The important aspect is that you install dev-tools.
+
+Afterwards, start R (in sudo mode) and install the 'scmamp' package:
+
+devtools::install_github("b0rxa/scmamp")
+
+You can find a description of the 'scmamp' package at https://github.com/b0rxa/scmamp
+
+Statistical evaluation of the results
+=====================================
+
+After producing the results of your (at least) three techniques for the 60 instances found in the Google Drive folder 'instances', you need to prepare a file just like 'results.dat'. Note that this file has a first column that contains the index of the corresponding instance. The second column indicates the number of input strings, the third one the length of the input strings, and the fourth one the fraction t used to calculate the threshold value. The remaining columns provide the results of your implemented algorithms for the corresponding instance. 
+
+The 'results.dat' file is an (incomplete) example file containing fake data for 20 problem instances and fraction t equal to 0.75. Your own file should contain the (actual) results for all 60 problem instances and 3 threshold values.
+
+To run the statistical tests and produce a critical difference plot, you need to start the R program (in a terminal, for example) and then run all the statements in the 'assess-statistics.R' file in the R command line.
+

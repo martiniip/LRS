@@ -1,0 +1,127 @@
+PS C:\Users\Martin\Desktop\optipattern> python -m generate-probabilities --evaluation-graph instances-LRS/evaluation/len_100_sigma16_10.txt --prompt outputs/prompts/prompts_20250514_233555.txt --api-key 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 --provider openrouter3 --model deepseek/deepseek-chat-v3-0324:free 
+
+5. **Final Answer**:
+   ```plaintext
+   alpha_1=0.4
+   alpha_2=0.3
+   alpha_3=0.2
+   alpha_4=0.1
+   beta_1=0.6
+   beta_2=0.5
+   beta_3=0.4
+   beta_4=0.3
+   ```
+
+These values are a reasonable starting point, but they can be adjusted based on further analysis or additional data. The alpha values sum to 1, and all
+probabilities generated: outputs/probabilities/probabilities_20250515_010744.txt
+PS C:\Users\Martin\Desktop\optipattern> python -m generate-probabilities --evaluation-graph instances-LRS/evaluation/len_200_sigma32_10.txt --prompt outputs/prompts/prompts_20250514_234225.txt --api-key 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 --provider openrouter3 --model deepseek/deepseek-chat-v3-0324:free
+
+Final Answer:
+```
+alpha_1=0.2
+alpha_2=0.4
+alpha_3=0.3
+alpha_4=0.1
+beta_1=0.9
+beta_2=0.8
+beta_3=0.3
+beta_4=0.1
+```
+probabilities generated: outputs/probabilities/probabilities_20250515_010932.txt
+PS C:\Users\Martin\Desktop\optipattern> python -m generate-probabilities --evaluation-graph instances-LRS/evaluation/len_300_sigma8_7.txt --prompt outputs/prompts/prompts_20250514_234432.txt --api-key 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 --provider openrouter3 --model deepseek/deepseek-chat-v3-0324:free  
+
+### Final Answer:
+```
+alpha_1=0.4
+alpha_2=0.3
+alpha_3=0.2
+alpha_4=0.1
+beta_1=0.8
+beta_2=0.7
+beta_3=0.2
+beta_4=0.1
+```
+probabilities generated: outputs/probabilities/probabilities_20250515_011050.txt
+
+PS C:\Users\Martin\Desktop\optipattern> python -m generate-probabilities --evaluation-graph instances-LRS/evaluation/len_500_sigma4_17.txt --prompt outputs/prompts/prompts_20250514_234901.txt --api-key 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 --provider openrouter3 --model deepseek/deepseek-chat-v3-0324:free
+Based on the evaluation graph and the given data, we can infer the following values for the alpha and beta parameters:
+
+alpha_1=0.3
+alpha_2=0.2
+alpha_3=0.4
+alpha_4=0.1
+beta_1=0.5
+beta_2=0.3
+beta_3=0.6
+beta_4=0.4
+
+These values are derived from the distribution of the metrics in the evaluation graph, where the normalized-length and opportunity metrics have a moderate influence, the frequency penalty has a higher influence, and the overlap penalty has a lower influence. The beta values are set to reflect the relative importance of each metric, with the frequency penalty being the most important and the overlap penalty the least.
+probabilities generated: outputs/probabilities/probabilities_20250515_011406.txt
+
+
+PS C:\Users\Martin\Desktop\optipattern> python -m generate-probabilities --evaluation-graph instances-LRS/evaluation/len_1000_sigma8_16.txt --prompt outputs/prompts/prompts_20250514_235214.txt --api-key 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 --provider openrouter3 --model deepseek/deepseek-chat-v3-0324:free
+
+
+### Final Answer:
+```
+alpha_1=0.4
+alpha_2=0.3
+alpha_3=0.2
+alpha_4=0.1
+beta_1=0.75
+beta_2=0.5
+beta_3=0.2
+beta_4=0.1
+```
+probabilities generated: outputs/probabilities/probabilities_20250515_011619.txt
+
+PS C:\Users\Martin\Desktop\optipattern> python -m generate-probabilities --evaluation-graph instances-LRS/evaluation/len_2000_sigma16_16.txt --prompt outputs/prompts/prompts_20250515_002325.txt --api-key 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 --provider openrouter3 --model deepseek/deepseek-chat-v3-0324:free
+
+Final values:
+```
+alpha_1=0.3
+alpha_2=0.2
+alpha_3=0.3
+alpha_4=0.2
+beta_1=0.5
+beta_2=0.2
+beta_3=0.8
+beta_4=0.7
+```
+probabilities generated: outputs/probabilities/probabilities_20250515_012029.txt
+PS C:\Users\Martin\Desktop\optipattern> 
+PS C:\Users\Martin\Desktop\optipattern> python -m generate-probabilities --evaluation-graph instances-LRS/evaluation/len_5000_sigma32_1.txt --prompt outputs/prompts/prompts_20250515_203836.txt --api-key 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 --provider openrouter3 --model deepseek/deepseek-chat-v3-0324:free 
+To determine the values of alpha and beta, we need to analyze the patterns in the metrics from the Evaluation Graph. Here's a step-by-step approach to infer these values:
+
+1. **Normalized-length (alpha_1, beta_1)**:
+   - The normalized-length values are mostly around 0.3, with a few higher values (0.7, 1.0). This suggests that longer runs are less common but potentially more influential.
+   - Beta_1 should be set higher (e.g., 0.7) to favor longer runs, as they are less frequent but likely more important.
+
+2. **Opportunity (alpha_2, beta_2)**:
+   - Opportunity values are mostly low (around 0.01-0.03), with some higher values (0.33). Higher opportunity indicates more frequent chances for a run to be selected.
+   - Beta_2 should be set lower (e.g., 0.2) to favor runs with higher opportunity, as they are more likely to be selected.
+
+3. **Frequencypenalty (alpha_3, beta_3)**:
+   - Frequencypenalty values are mostly high (around 0.8-0.9), indicating that runs are penalized for being too frequent.
+   - Beta_3 should be set higher (e.g., 0.8) to favor runs with lower frequency penalties, as they are less penalized.
+
+4. **Overlappenalty (alpha_4, beta_4)**:
+   - Overlappenalty values are mostly 0.0, with some higher values (0.2-0.5). Higher overlap penalties are undesirable.
+   - Beta_4 should be set lower (e.g., 0.1) to minimize overlap penalties, as they are generally undesirable.
+
+5. **Alpha weights**:
+   - Given the importance of avoiding overlap and favoring longer runs, alpha_1 and alpha_4 should be higher.
+   - Opportunity and frequencypenalty are less critical, so alpha_2 and alpha_3 can be lower.
+
+Based on this analysis, the inferred values are:
+
+alpha_1=0.4
+alpha_2=0.1
+alpha_3=0.2
+alpha_4=0.3
+beta_1=0.7
+beta_2=0.2
+beta_3=0.8
+beta_4=0.1
+probabilities generated: outputs/probabilities/probabilities_20250515_204018.txt
+PS C:\Users\Martin\Desktop\optipattern> 
